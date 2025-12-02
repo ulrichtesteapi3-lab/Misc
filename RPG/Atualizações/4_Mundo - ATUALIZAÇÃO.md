@@ -1,5 +1,5 @@
 # 4_MUNDO — PATCH ATLAS
-**V6.4** | Eberron | Ref: `Instructions §0, §1.2, §5 (Manifest Zones, Custos), Apêndice C`
+**V5.4** | Eberron | Ref: `Instructions §0, §1.2, §5`
 
 ---
 
@@ -18,12 +18,32 @@ Processar **DELTAS** em locais após sessões. APENAS homebrew ou modificações
 
 ---
 
+## ESTRUTURA DO ARQUIVO (Referência)
+
+### Tiers
+| Tier | O Quê | Linhas | Sentidos |
+|------|-------|--------|----------|
+| **T1** | Homebrew completo | 60-100 | 5 |
+| **T2** | Customizado/modificado | 30-50 | 3 |
+| **T3** | Delta canônico | 10-20 | 1-2 |
+
+### Status
+| Código | Significa |
+|--------|----------|
+| OPERACIONAL | Normal |
+| TENSO | Conflito latente |
+| DANIFICADO | Destruição parcial |
+| OCUPADO | Tomado por outra facção |
+| ABANDONADO | Sem controle |
+
+---
+
 ## SEPARAÇÃO
 
-| Aqui (`4_Mundo`) | Outro Doc |
-|------------------|-----------|
-| Descrição física | Eventos → `1_Plot` |
-| Status, Controle | NPCs → `3_Relações` |
+| Aqui (`4_Mundo_DDMM`) | Outro Doc |
+|-----------------------|-----------|
+| Descrição física | Eventos → `1_Plot_DDMM` |
+| Status, Controle | NPCs → `3_Relações_DDMM` |
 | Sensorial atualizado | — |
 
 ---
@@ -42,7 +62,8 @@ Processar **DELTAS** em locais após sessões. APENAS homebrew ou modificações
 | Trigger | Prioridade | Ações |
 |---------|------------|-------|
 | 🔴 Homebrew destruído/conquistado | ALTA | Status + Sensorial |
-| 🔴 Novo homebrew descoberto | ALTA | Criar entrada |
+| 🔴 Novo homebrew descoberto | ALTA | Template DESCOBERTO (expandir depois) |
+| 🔴 **Promoção de Tier** | ALTA | Expandir seções (ver abaixo) |
 | 🟡 Canônico modificado | MÉDIA | Criar/atualizar DELTA |
 | � Manifest Zone descoberta | MÉDIA | Efeitos mecânicos (§5) |
 | 🟢 Persona nova usada em local | BAIXA | Atualizar "Persona Usada" |
@@ -123,7 +144,7 @@ Processar **DELTAS** em locais após sessões. APENAS homebrew ou modificações
 
 ### Nova Rota
 
-> **Ref:** Custos → Instructions §5
+> **Ref:** Custos → §5
 
 ```markdown
 ### ROTA — DESCOBERTA
@@ -151,10 +172,11 @@ Processar **DELTAS** em locais após sessões. APENAS homebrew ou modificações
 | ❌ | ✅ |
 |---|---|
 | Canônico não modificado | Ignorar (IA pesquisa) |
-| NPCs moradores | → `3_Relações` |
-| Eventos sem impacto físico | → `1_Plot` |
+| NPCs moradores | → `3_Relações_DDMM` |
+| Eventos sem impacto físico | → `1_Plot_DDMM` |
 | Sem nível vertical (Sharn) | SEMPRE especificar |
 | Local sem "Persona Usada" | Changeling: qual forma? |
+| Promoção sem expandir | T3→T2: +3 sentidos, +Estrutura |
 
 ---
 
@@ -163,8 +185,61 @@ Processar **DELTAS** em locais após sessões. APENAS homebrew ou modificações
 - [ ] Só homebrew ou deltas?
 - [ ] Altitude especificada (Sharn)?
 - [ ] Changeling: "Persona Usada" atualizada?
-- [ ] Sem NPCs (→ `3_Relações`)?
+- [ ] Sem NPCs (→ `3_Relações_DDMM`)?
+- [ ] Promoção de Tier: Seções expandidas conforme novo Tier?
 
 ---
 
-**GERE O PATCH.**
+## PROMOÇÃO DE TIER
+
+### T3 → T2
+**Gatilho:** Local ganha importância (base de operações, esconderijo, ponto de encontro recorrente)
+
+```markdown
+### [LOCAL] — PROMOÇÃO T3 → T2
+**Novo Tier:** T2 | **Motivo:** [Por que importa mais agora]
+
+#### EXPANDIR (copiar estrutura T2):
+- [ ] Eberron: +Nível/Distrito, +Pós-Guerra
+- [ ] Aparência: 1-2 → 3 sentidos (Visual, Som, Cheiro)
+- [ ] Estrutura: Tabela de Áreas/Funções
+- [ ] Dados: +Entrada, +Segurança
+- [ ] Changeling: +Persona usada, +Sabem?
+- [ ] Delta: Se modificado do cânone, tabela Era/Agora
+
+// Motivo: [Evento que elevou importância] - S[N]
+```
+
+### T2 → T1
+**Gatilho:** Local vira central à campanha (quartel-general, local de confronto final, santuário)
+
+```markdown
+### [LOCAL] — PROMOÇÃO T2 → T1
+**Novo Tier:** T1 | **Motivo:** [Por que é central]
+
+#### EXPANDIR (copiar estrutura T1):
+- [ ] Eberron: Tabela completa (Nível, Distrito, Manifesto, Pós-Guerra)
+- [ ] Aparência: 3 → 5 sentidos (adicionar Tato, Vibe)
+- [ ] Estrutura: Tabela com Acesso (Público/Restrito/Secreto)
+- [ ] Dados: +Recursos, +Perigo
+- [ ] Changeling: Tabela completa (Persona, Sabem?, Se descoberto?)
+- [ ] Notas IA: +Tom, +Gancho
+
+// Motivo: [Evento que tornou central] - S[N]
+```
+
+---
+
+## CROSS-REF
+
+| Tópico | Doc |
+|--------|-----|
+| Estado atual, Eventos | `1_Plot_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| NPCs moradores | `3_Relações_DDMM` |
+| Log de sessões | `5_Aventura_DDMM` |
+| Criação original | `4_Mundo - CRIAÇÃO` |
+
+---
+
+**GERE O PATCH ATLAS.**

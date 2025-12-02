@@ -1,5 +1,5 @@
 # 4_MUNDO — ATLAS HOMEBREW
-**V5.3** | Eberron | Ref: `Instructions §0, §1.2, §5 (Manifest Zones), Apêndice C`
+**V5.4** | Eberron | Ref: `Instructions §0, §1.2, §5`
 
 ---
 
@@ -24,10 +24,10 @@ HOMEBREW               = DOCUMENTAR COMPLETO
 
 ## SEPARAÇÃO
 
-| Aqui (`4_Mundo`) | Outro Doc |
-|------------------|-----------|
-| Descrição física | Eventos → `1_Plot` |
-| Recursos, segurança | NPCs → `3_Relações` |
+| Aqui (`4_Mundo_DDMM`) | Outro Doc |
+|-----------------------|-----------|
+| Descrição física | Eventos → `1_Plot_DDMM` |
+| Recursos, segurança | NPCs → `3_Relações_DDMM` |
 | Deltas do cânone | — |
 
 ---
@@ -55,14 +55,11 @@ HOMEBREW               = DOCUMENTAR COMPLETO
 
 ## EBERRON: MANIFEST ZONES
 
-> **Ref completa:** Instructions §5 (Manifest Zones em Sharn)
+> **Ref:** §5 (Eberron: Regras Especiais)
 
-| Plano | Efeito | Onde |
-|-------|--------|------|
-| Syrania (Céu) | Voo fácil, levitação | Toda Sharn (torres altas) |
-| Fernia (Fogo) | Fire +1 dado, forjas perfeitas | Cogs, foundries |
-| Irian (Luz) | Cura +1 dado, undead enfraquecidos | Templos Upper, jardins |
-| Mabar (Sombra) | Necrotic +1 dado, undead fortalecidos | Lower Dura, cemitérios |
+**Regra:** Syrania (toda Sharn) = voo fácil. Outras zonas: +1 dado no elemento correspondente.
+
+**Importante para homebrew:** Se criar local em zona manifesta, especificar qual plano e efeito mecânico.
 
 ---
 
@@ -186,7 +183,7 @@ HOMEBREW               = DOCUMENTAR COMPLETO
 
 ## ROTAS
 
-> **Ref custos:** Instructions §5 (Eberron: Regras Especiais)
+> **Ref custos:** §5
 
 | De | Para | Método | Tempo | Custo |
 |----|------|--------|-------|-------|
@@ -202,8 +199,8 @@ HOMEBREW               = DOCUMENTAR COMPLETO
 | ❌ | ✅ |
 |---|---|
 | Sharn genérico | IA pesquisa → só deltas |
-| NPCs moradores | → `3_Relações` |
-| Eventos passados | → `1_Plot` |
+| NPCs moradores | → `3_Relações_DDMM` |
+| Eventos passados | → `1_Plot_DDMM` |
 | T1 para 1 visita | Use T3 |
 | Ignorar altitude | Nível define tom |
 | Local sem persona | Changeling: QUAL FORMA? |
@@ -215,9 +212,21 @@ HOMEBREW               = DOCUMENTAR COMPLETO
 - [ ] Só homebrew ou deltas?
 - [ ] T1 tem 5 sentidos?
 - [ ] Altitude especificada?
-- [ ] Sem NPCs (→ `3_Relações`)?
+- [ ] Sem NPCs (→ `3_Relações_DDMM`)?
 - [ ] **Changeling:** Locais frequentes têm "Persona usada"?
 
 ---
 
-**GERE O CODEX.**
+## CROSS-REF
+
+| Tópico | Doc |
+|--------|-----|
+| Estado atual, Eventos | `1_Plot_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| NPCs moradores | `3_Relações_DDMM` |
+| Log de sessões | `5_Aventura_DDMM` |
+| Atualização | `4_Mundo - ATUALIZAÇÃO` |
+
+---
+
+**GERE O ARQUIVO DE MUNDO.**

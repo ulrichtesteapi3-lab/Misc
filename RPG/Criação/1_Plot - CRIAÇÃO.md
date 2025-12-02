@@ -1,5 +1,5 @@
 # 1_PLOT — ANÁLISE ESTRATÉGICA CUMULATIVA
-**V5.3** | Eberron | Ref: `Instructions §0, §1.2, §3, §5, §6, Apêndice C`
+**V5.4** | Eberron | Ref: `Instructions §0, §1.2, §3, §4, §5, §6`
 
 ---
 
@@ -29,7 +29,7 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 |-----|-------|
 | **Subtexto** | Analise DISSONÂNCIA, não só palavras. Hesitação = Flag. |
 | **Métricas** | Sentimentos → números. Afinidade (±10), Confiança (0-10), Atração (0-10). |
-| **Cross-Ref** | Link `[3_Relações_NPC]`. NÃO duplique. |
+| **Cross-Ref** | Link `[3_Relações_DDMM]`. NÃO duplique. |
 | **Flags** | `SCREAMING_SNAKE_CASE`. Ex: `BOROMAR_DIVIDA_PENDENTE` |
 | **Compressão** | Sessões antigas = 1-2 linhas. Atual = detalhado. |
 | **Vozes** | NPCs falam conforme Nação → Instructions §3 (Vozes por Nação) |
@@ -60,7 +60,7 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 |----|-------|--------|------|
 | [X/Max] | [Distrito] | [B/M/A/Crítica] | [gp] |
 
-### Identidades (Changeling)
+### Identidades (Se Changeling)
 | Persona | Uso | Calor | Comprometida? | Flag |
 |---------|-----|-------|---------------|------|
 | [Forma Real] | [Quando] | [Frio/Morno/Quente] | [Não/Parcial/Sim] | `ID_REAL` |
@@ -118,8 +118,6 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 ---
 
 ## CONFLITOS
-
-> **Ref:** Complicações por contexto → Instructions §5 (Nat 1)
 
 ### [NOME] (🔴/🟡/🟢)
 | Campo | Valor |
@@ -197,8 +195,9 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 ### Validação
 - [ ] Histórico ~10 linhas total?
 - [ ] Ganchos têm deadline?
-- [ ] Sem duplicação com `3_Relações`?
-- [ ] Tier do PC definido? (→ DCs: Instructions §5)
+- [ ] Sem duplicação com `3_Relações_DDMM`?
+- [ ] Tier do PC definido? (→ DCs: §5)
+- [ ] NPCs limitados? (→ Memória: §4)
 
 ---
 
@@ -206,7 +205,7 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 
 | ❌ | ✅ |
 |---|---|
-| Duplicar NPC | Ref: `3_Relações` |
+| Duplicar NPC | Ref: `3_Relações_DDMM` |
 | Parágrafos | Tabelas |
 | "Talvez X" | "Se [trigger], então [X]" |
 | Gancho sem prazo | "Deadline: +2 semanas" |
@@ -218,10 +217,10 @@ Você é um **analista de inteligência**. Converta narrativa bruta em dados aci
 
 | Tópico | Doc |
 |--------|-----|
-| NPCs detalhados | `3_Relações` |
-| Stats do PC | `2_Ficha` |
-| Locais homebrew | `4_Mundo` |
-| Log de sessões | `5_Aventura` |
+| NPCs detalhados | `3_Relações_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| Locais homebrew | `4_Mundo_DDMM` |
+| Log de sessões | `5_Aventura_DDMM` |
 | Atualização | `1_Plot - ATUALIZAÇÃO` |
 
 ---

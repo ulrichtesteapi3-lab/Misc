@@ -1,5 +1,5 @@
 # 3_RELAÇÕES — RADAR SOCIAL & PERFIL NPC
-**V5.3** | Eberron | Ref: `Instructions §0, §4, §8 (Male/Female Gaze, Arquétipos), Apêndice B/C/G`
+**V5.4** | Eberron | Ref: `Instructions §0, §3, §4, §8`
 
 ---
 
@@ -20,8 +20,8 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 
 ## SEPARAÇÃO
 
-| Aqui (`3_Relações`) | Outro Doc (`1_Plot`) |
-|---------------------|----------------------|
+| Aqui (`3_Relações_DDMM`) | Outro Doc (`1_Plot_DDMM`) |
+|--------------------------|---------------------------|
 | Aparência, Personalidade | Localização atual |
 | Shadow, Fetiches, Limites | Agenda, Missões |
 | Histórico | Reputação (número) |
@@ -31,11 +31,11 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 
 ## TIERS
 
-| Tier | Quem | Linhas | Sentidos |
-|------|------|--------|----------|
-| **T1** | Amantes, família | 60-100 | 5 |
-| **T2** | Aliados, rivais | 30-50 | 3 |
-| **T3** | Contatos | 10-20 | 1-2 |
+| Tier | Quem | Linhas | Sentidos | Fala |
+|------|------|--------|----------|------|
+| **T1** | Amantes, família | 60-100 | 5 | Diálogos longos |
+| **T2** | Aliados, rivais | 30-50 | 3 | Diálogos médios |
+| **T3** | Contatos | 10-20 | 1-2 | Máx 2 frases |
 
 ---
 
@@ -121,20 +121,19 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 - **Want:** [O que DIZ querer]
 - **Need:** [O que REALMENTE precisa]
 
-> **Marcos:** Ver `5_Aventura` (histórico de sessões)
+> **Marcos:** Ver `5_Aventura_DDMM` (histórico de sessões)
 
 #### Perfil Íntimo
 
-> **Ref:** Male/Female Gaze + Arquétipos → Instructions §8
+> **Ref:** Gaze + Arquétipos → §8
 
 | Campo | Valor |
 |-------|-------|
 | Orientação | [X] |
-| Arquétipo ♀ | [Executiva/Predadora/Saciada/Degradante/Vocal/Sensorial] |
-| Arquétipo ♂ | [Controlador/Servil/Bruto/Provocador/Vulnerável/Silencioso] |
+| Arquétipo | [Ver §8 — escolha 1-2] |
 | Dinâmica | [Dom/Sub/Switch] |
 | Quem Inicia | [NPC / Espera / Depende] |
-| Gaze Dominante | [Male/Female/Misto — ver §8.Gaze] |
+| Gaze | [Male/Female/Misto] |
 | Sexo como Arma | [Sim/Não — como usa] |
 | Vocabulário | [Vulgar/Sujo/Poético] |
 
@@ -145,8 +144,6 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 **Limites:** [Hard No]
 **Zonas:** [Erógenas]
 **Aftercare:** [Como cuida depois]
-
-> **Nota:** Use arquétipo conforme gênero do NPC. Consulte §8 para frases de cada tipo.
 
 ---
 
@@ -178,7 +175,7 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 - **Want/Need:** [Resumido]
 
 #### Íntimo (se aplicável)
-- **Arquétipo:** [♀ ou ♂ conforme gênero — ver §8]
+- **Arquétipo:** [Ver §8]
 - **Dinâmica:** [Dom/Sub/Switch]
 - **Gaze:** [Male/Female/Misto]
 - **Kink:** [1-2 principais]
@@ -230,7 +227,7 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 
 ## EXECUÇÃO
 
-1. **LISTAR** NPCs de sessões + `1_Plot`
+1. **LISTAR** NPCs de sessões + `1_Plot_DDMM`
 2. **CLASSIFICAR** por Tier (importância narrativa)
 3. **PREENCHER** template do Tier
 4. **VALIDAR** aparência + Eberron context
@@ -251,7 +248,7 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 | ❌ | ✅ |
 |---|---|
 | "Ela é bonita" | Descrição sensorial específica |
-| Localização aqui | → `1_Plot` |
+| Localização aqui | → `1_Plot_DDMM` |
 | T1 sem íntimo | T1 EXIGE perfil completo |
 | T3 com 50 linhas | T3 = 10-20 máx |
 | NPC sem Eberron | Nação? Veterano? Casa? |
@@ -262,4 +259,16 @@ Criar **GUIA DE INTERPRETAÇÃO** para o Mestre narrar NPCs.
 
 ---
 
-**GERE O ARQUIVO.**
+## CROSS-REF
+
+| Tópico | Doc |
+|--------|-----|
+| Estado atual, Flags | `1_Plot_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| Locais homebrew | `4_Mundo_DDMM` |
+| Log de sessões | `5_Aventura_DDMM` |
+| Atualização | `3_Relações - ATUALIZAÇÃO` |
+
+---
+
+**GERE O ARQUIVO DE RELAÇÕES.**

@@ -1,5 +1,5 @@
-# 2_FICHA — PERFIL DO PROTAGONISTA
-**V5.3** | Eberron | Ref: `Instructions §0, §1.2, §5, §8, Apêndice A/B/F`
+# 2_PERSONAGEM — PERFIL DO PROTAGONISTA
+**V5.4** | Eberron | Ref: `Instructions §0, §1.2, §3, §4, §5, §8`
 
 ---
 
@@ -20,12 +20,12 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 
 ## SEPARAÇÃO DE CAMADAS
 
-| Aqui (`2_Ficha`) | Outro Doc |
-|------------------|-----------|
-| Stats, Atributos, Saves | HP atual, Gold → `1_Plot` |
-| Aparência (5 sentidos) | NPCs → `3_Relações` |
-| Habilidades, Arsenal | Projetos → `1_Plot` |
-| Psicologia, Shadow | Condições <24h → `1_Plot` |
+| Aqui (`2_Personagem`) | Outro Doc |
+|-----------------------|-----------|
+| Stats, Atributos, Saves | HP atual, Gold → `1_Plot_DDMM` |
+| Aparência (5 sentidos) | NPCs → `3_Relações_DDMM` |
+| Habilidades, Arsenal | Projetos → `1_Plot_DDMM` |
+| Psicologia, Shadow | Condições <24h → `1_Plot_DDMM` |
 
 ---
 
@@ -43,7 +43,7 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 ## OUTPUT
 
 ```markdown
-# FICHA: [NOME]
+# PERSONAGEM: [NOME]
 **V[X]** | [Data] | Tier [X] | Nível [X] [Classe]
 
 ---
@@ -172,11 +172,9 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 | Combate | [Traje] |
 | Social | [Traje] |
 
-### Raça Especial (se aplicável)
+### Changeling (se aplicável)
 
-#### CHANGELING (OBRIGATÓRIO SE APLICÁVEL)
-
-##### Forma Verdadeira
+#### Forma Verdadeira
 | Aspecto | Descrição |
 |---------|-----------|
 | Pele | [Pálida/cinza/tom específico] |
@@ -184,9 +182,9 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 | Cabelo | [Branco/ausente/textura] |
 | Traços | [Andrógino? Marcas? Peculiaridades?] |
 
-##### Personas Conhecidas
+#### Personas Conhecidas
 
-> **Ref:** Voz conforme Nação da persona → Instructions §3 (Vozes por Nação)
+> **Ref:** Voz conforme Nação → §3
 
 | Persona | Aparência (Resumo) | Nação/Voz | Personalidade | Uso |
 |---------|--------------------|----|---------------|-----|
@@ -194,11 +192,11 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 | [Nome 2] | [Visual] | [Nação — tom] | [Traços] | [Propósito] |
 | [Nome 3] | [Visual] | [Nação — tom] | [Traços] | [Propósito] |
 
-##### Transformação
+#### Transformação
 - **Gatilhos:** [Quando muda — perigo? social? emocional?]
 - **Tells:** [O que pode denunciar?]
 
-##### Psicologia Changeling
+#### Psicologia Changeling
 - **Identidade:** [Qual forma considera "real"? Ou nenhuma?]
 - **Sobre ser Changeling:** [Orgulho? Vergonha? Pragmático?]
 - **Quem sabe:** [NPCs que conhecem a verdade]
@@ -235,19 +233,16 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 
 ## 7. PERFIL SEXUAL (se aplicável)
 
-> **Ref:** Arquétipos + Male/Female Gaze → Instructions §8
+> **Ref:** Arquétipos e Gaze → §8
 
 | Campo | Valor |
 |-------|-------|
 | Orientação | [X] |
 | Role | [Dom/Sub/Switch] |
-| Arquétipo ♀ | [Executiva/Predadora/Saciada/Degradante/Vocal/Sensorial] |
-| Arquétipo ♂ | [Controlador/Servil/Bruto/Provocador/Vulnerável/Silencioso] |
-| Gaze Preferido | [Male/Female/Misto] |
+| Arquétipo | [Ver §8 — escolha 1-2] |
+| Gaze | [Male/Female/Misto] |
 | Quem Inicia | [PC / Espera / Responde] |
 | Vocabulário | [Vulgar/Elegante/Tímido] |
-
-> **Nota:** Use arquétipo conforme gênero do PC. Consulte §8 para frases.
 
 ### Preferências
 | Sim | Talvez | Não |
@@ -272,7 +267,7 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 
 ---
 
-**Cross-Ref:** `3_Relações` (NPCs) | `1_Plot` (Estado atual)
+**Cross-Ref:** `3_Relações_DDMM` (NPCs) | `1_Plot_DDMM` (Estado atual)
 ```
 
 ---
@@ -288,7 +283,8 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 - [ ] Quick Ref suficiente para entender PC em 10s?
 - [ ] Economia de Ação tem TODAS habilidades?
 - [ ] Aparência tem 5 sentidos?
-- [ ] Sem duplicação com `1_Plot`?
+- [ ] Changeling tem personas documentadas? (se aplicável)
+- [ ] Sem duplicação com `1_Plot_DDMM`?
 
 ---
 
@@ -296,7 +292,7 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 
 | ❌ | ✅ |
 |---|---|
-| Duplicar gold/projetos | Ref: `1_Plot` |
+| Duplicar gold/projetos | Ref: `1_Plot_DDMM` |
 | Habilidades espalhadas | 1 tabela única |
 | Só aparência visual | 5 sentidos |
 | "É forte" | "FOR 18, dobra barras" |
@@ -308,10 +304,10 @@ Criar a **BÍBLIA DO PC** — fonte única de verdade para mecânicas, aparênci
 
 | Tópico | Doc |
 |--------|-----|
-| Estado atual (HP, Gold) | `1_Plot` |
-| NPCs relacionados | `3_Relações` |
-| Atualização | `2_Ficha - ATUALIZAÇÃO` |
+| Estado atual (HP, Gold) | `1_Plot_DDMM` |
+| NPCs relacionados | `3_Relações_DDMM` |
+| Atualização | `2_Personagem - ATUALIZAÇÃO` |
 
 ---
 
-**GERE A FICHA.**
+**GERE O ARQUIVO DE PERSONAGEM.**

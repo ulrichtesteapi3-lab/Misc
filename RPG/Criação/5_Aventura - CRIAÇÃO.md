@@ -1,5 +1,5 @@
 # 5_AVENTURA — QUEST LOG
-**V5.3** | Eberron | Ref: `Instructions §0, §3, §4, §6, §7 (Miniblocos)`
+**V5.4** | Eberron | Ref: `Instructions §0, §3, §4, §6, §7`
 
 ---
 
@@ -16,13 +16,13 @@ Setup inicial do Quest Log — memória persistente da campanha.
 
 **Meta:** ~10-15 linhas/sessão. 20 sessões ≈ 300 linhas.
 
-> **Ref Miniblocos:** Instructions §7 (Padrão, Combate, Social, Íntimo)
+> **Ref Miniblocos:** §7 (Padrão, Combate, Social, Íntimo)
 
 ### Template Minibloco (Referência)
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🩹 HP: [X/Max] | ⚡ Slots: [X/Y] | 💰 [X]gp
-📍 [Local], [Distrito] | 🌙 [Hora]
+🩹 HP: [X/Max] | ⚡ Slots: [X/Y] | 🎲 Momentum: [X/3]
+📍 [Local], [Distrito] | 🌙 [Hora] | 💰 [X]gp
 🏛️ [Facção +X] | [Facção -X]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
@@ -96,7 +96,7 @@ Setup inicial do Quest Log — memória persistente da campanha.
 |----|--------|----|--------|-----|
 | T1 | [Nome] | [Origem] | [Código] | [Última] |
 
-> **Changeling:** Status de Identidades → ver `1_Plot` (Calor, Comprometida)
+> **Changeling:** Status de Identidades → ver `1_Plot_DDMM` (Calor, Comprometida)
 
 ---
 
@@ -104,11 +104,11 @@ Setup inicial do Quest Log — memória persistente da campanha.
 
 ### BACKSTORY
 > [2-3 fatos públicos que NPCs podem saber]
-> Detalhes completos → `2_Ficha`
+> Detalhes completos → `2_Personagem_DDMM`
 
 ### ESTADO INICIAL
 - **Recursos:** [Gold, dívidas]
-- **Relações iniciais:** [Quem conhece — detalhes em `3_Relações`]
+- **Relações iniciais:** [Quem conhece — detalhes em `3_Relações_DDMM`]
 
 ### GANCHOS
 - [ ] [Motivação principal]
@@ -177,10 +177,12 @@ Setup inicial do Quest Log — memória persistente da campanha.
 
 | Tópico | Doc |
 |--------|-----|
-| NPCs completos | `3_Relações` |
-| Locais completos | `4_Mundo` |
-| Adicionar sessão | `5_Aventura - ATUALIZAÇÃO` |
+| Estado atual, Flags | `1_Plot_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| NPCs completos | `3_Relações_DDMM` |
+| Locais completos | `4_Mundo_DDMM` |
+| Atualização | `5_Aventura - ATUALIZAÇÃO` |
 
 ---
 
-**GERE O QUEST LOG.**
+**GERE O ARQUIVO DE AVENTURA.**

@@ -1,5 +1,5 @@
 # 5_AVENTURA — APPEND SESSÃO
-**V6.4** | Eberron | Ref: `Instructions §0, §3, §4, §6, §7 (Miniblocos)`
+**V5.4** | Eberron | Ref: `Instructions §0, §3, §4, §6, §7`
 
 ---
 
@@ -19,8 +19,8 @@ Adicionar **NOVA SESSÃO** ao Quest Log. ~10-15 linhas/sessão.
 ### Template Minibloco (Referência)
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🩹 HP: [X/Max] | ⚡ Slots: [X/Y] | 💰 [X]gp
-📍 [Local], [Distrito] | 🌙 [Hora]
+🩹 HP: [X/Max] | ⚡ Slots: [X/Y] | 🎲 Momentum: [X/3]
+📍 [Local], [Distrito] | 🌙 [Hora] | 💰 [X]gp
 🏛️ [Facção +X] | [Facção -X]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
@@ -29,11 +29,11 @@ Adicionar **NOVA SESSÃO** ao Quest Log. ~10-15 linhas/sessão.
 
 ## SEPARAÇÃO
 
-| Aqui (`5_Aventura`) | Outro Doc |
-|---------------------|-----------|
-| Fatos → Consequências | NPCs detalhados → `3_Relações` |
-| Impacto (Δ) | Locais detalhados → `4_Mundo` |
-| Threads | Changeling Calor → `1_Plot` |
+| Aqui (`5_Aventura_DDMM`) | Outro Doc |
+|-------------------------|-----------|
+| Fatos → Consequências | NPCs detalhados → `3_Relações_DDMM` |
+| Impacto (Δ) | Locais detalhados → `4_Mundo_DDMM` |
+| Threads | Changeling Calor → `1_Plot_DDMM` |
 
 ---
 
@@ -50,13 +50,13 @@ Adicionar **NOVA SESSÃO** ao Quest Log. ~10-15 linhas/sessão.
 ### Afinidade
 | Range | Estado |
 |-------|--------|
-| +8/+10 | LEAL |
-| +4/+7 | ALIADO |
-| +1/+3 | AMIGÁVEL |
+| +8 a +10 | LEAL |
+| +4 a +7 | ALIADO |
+| +1 a +3 | AMIGÁVEL |
 | 0 | NEUTRO |
-| -1/-3 | DESCONFIADO |
-| -4/-7 | HOSTIL |
-| -8/-10 | INIMIGO |
+| -1 a -3 | DESCONFIADO |
+| -4 a -7 | HOSTIL |
+| -8 a -10 | INIMIGO |
 
 ### Fontes
 | Código | Significa |
@@ -119,7 +119,7 @@ Adicionar **NOVA SESSÃO** ao Quest Log. ~10-15 linhas/sessão.
 |---------|-------|---------------|-----|
 | [Nome] | [Antes→Depois] | [S/N/Suspeita] | S[N] |
 
-> Cross-ref: Atualizar também em `1_Plot` (Identidades)
+> Cross-ref: Atualizar também em `1_Plot_DDMM` (Identidades)
 ```
 
 ---
@@ -148,20 +148,20 @@ Adicionar **NOVA SESSÃO** ao Quest Log. ~10-15 linhas/sessão.
 
 1. **FATOS:** Adicionar `[como X]` quando persona for relevante
 2. **IMPACTO:** Coluna "Conhece Como" OBRIGATÓRIA
-3. **Calor mudou?** → Cross-ref `1_Plot` (não duplicar aqui)
+3. **Calor mudou?** → Cross-ref `1_Plot_DDMM` (não duplicar aqui)
 
 ---
 
 ## CENAS ÍNTIMAS: TRACKING
 
-> **Ref:** Male/Female Gaze → Instructions §8
+> **Ref:** Gaze + Arquétipos → §8
 
 Quando houver cena íntima, registrar nos FATOS:
 ```
 - Cena íntima com [NPC] [como Persona] → Gaze: [M/F/Misto], [Kink/Dinâmica]
 ```
 
-**Cross-ref:** `3_Relações` Perfil Íntimo do NPC
+**Cross-ref:** `3_Relações_DDMM` Perfil Íntimo do NPC
 
 ---
 
@@ -174,7 +174,7 @@ Quando houver cena íntima, registrar nos FATOS:
 | Thread sem ID | Sempre T[X] |
 | Sem fonte | Sempre (D/T/I/R/?) |
 | Evento sem persona | Changeling: [como X] |
-| Duplicar Calor | Calor → `1_Plot` |
+| Duplicar Calor | Calor → `1_Plot_DDMM` |
 
 ---
 
@@ -185,8 +185,20 @@ Quando houver cena íntima, registrar nos FATOS:
 - [ ] Todo NPC tem "Conhece Como"?
 - [ ] Threads têm ID?
 - [ ] Changeling eventos com `[como X]`?
-- [ ] Calor mudou? → Patch Identidades + `1_Plot`
-- [ ] Cena íntima? → Gaze registrado + `3_Relações`
+- [ ] Calor mudou? → Patch Identidades + `1_Plot_DDMM`
+- [ ] Cena íntima? → Gaze (§8) registrado + `3_Relações_DDMM`
+
+---
+
+## CROSS-REF
+
+| Tópico | Doc |
+|--------|-----|
+| Estado atual, Flags | `1_Plot_DDMM` |
+| Stats do PC | `2_Personagem_DDMM` |
+| NPCs completos | `3_Relações_DDMM` |
+| Locais completos | `4_Mundo_DDMM` |
+| Criação original | `5_Aventura - CRIAÇÃO` |
 
 ---
 
