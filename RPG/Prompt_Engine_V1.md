@@ -24,6 +24,26 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
 *   **Instrução Padrão:**
     > "Gere a narração. CRÍTICA INTERNA: O tom está sombrio o suficiente? Há clichês de fantasia medieval que devem ser removidos? A regra foi aplicada corretamente? REESCREVA aplicando as correções."
 
+### 1.4. Self-Consistency (SC-CoT)
+*   **Conceito:** Gerar múltiplos raciocínios curtos e selecionar o mais consistente com as fontes (Hierarchy of Truth), descartando os demais.
+*   **Aplicação:** Dilemas, rolagens críticas, decisões de NPC importantes.
+*   **Instrução Padrão:**
+    > "Gere 3 rascunhos internos de raciocínio. Compare com as fontes (Hierarchy of Truth) e escolha o mais consistente. Descarte os outros antes de narrar."
+
+### 1.5. Plan-and-Solve (P&S)
+*   **Conceito:** Separar internamente em duas fases: (1) Plano curto; (2) Execução imediata.
+*   **Aplicação:** Ações simples ou médias (teste único, cena social curta) onde ToT seria caro.
+*   **Instrução Padrão:**
+    > "PLANO (2 bullets internos): objetivo e passos. EXECUÇÃO: escreva direto. Não exponha o plano."
+
+### 1.6. Routing (Fast vs Deep)
+*   **Conceito:** Escolher o modo de raciocínio antes de responder para equilibrar custo e qualidade.
+*   **Aplicação:**
+    - **Fast:** P&S + Verificador curto → ações simples/únicas.
+    - **Deep:** SC-CoT + ToT + Verificador completo → dilemas, NPC T1/T2, rolagens críticas.
+*   **Instrução Padrão:**
+    > "Selecione o modo. Fast: P&S + checklist curta. Deep: SC-CoT + ToT + checklist completa. Não exponha o modo ao jogador."
+
 ---
 
 ## 2. A Alma (Narrativa & Roleplay)
@@ -46,6 +66,16 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
 *   **Instrução Padrão:**
     > "Descreva o beco. [Direção: Foco no cheiro de ozônio, na chuva ácida e na sensação de claustrofobia industrial]."
 
+### 2.4. Style Anchors
+*   **Conceito:** Âncoras curtas, fixas, por tipo de cena, para reduzir deriva de tom com custo mínimo de tokens.
+*   **Aplicação:** Selecionar âncora conforme o modo atual.
+*   **Âncoras Sugeridas:**
+    - Combate: "Impacto físico, ritmo fluido, mostrar consequência imediata."
+    - Social: "Duelo verbal, subtexto, corpo contradiz fala."
+    - Investigação: "Detalhe concreto, pistas em camadas, silêncio importa."
+    - Íntimo: "25 parágrafos, alternar gaze, sentido primário por parágrafo."
+    - Horror: "Frio, podridão, inevitabilidade, sentido ausente."
+
 ---
 
 ## 3. A Memória (Contexto & Retenção)
@@ -58,7 +88,7 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
 
 ### 3.2. Chain of Density (CoD)
 *   **Conceito:** Processo iterativo de resumo onde se remove palavras de ligação e se insere mais entidades (Nomes, Locais, Fatos) a cada passo, criando resumos densos.
-*   **Aplicação:** Arquivos de "Atualização" e Memória de Longo Prazo.
+*   **Aplicação:** Arquivos de "Atualização" e Memória de Longo Prazo (uso offline/entre cenas; evitar em respostas normais para poupar tokens).
 *   **Instrução Padrão:**
     > "Resuma a cena. Repita o resumo 3 vezes, a cada vez tornando-o mais conciso e inserindo mais Entidades Nomeadas (NPCs, Locais, Itens) até ter um parágrafo denso de fatos."
 
@@ -71,6 +101,12 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
     3.  **Histórico da Sessão (Memória Recente):** O que acabou de acontecer.
     4.  **Lore Geral de Eberron:** O pano de fundo.
     5.  **Criatividade da IA:** Usada apenas para preencher lacunas, nunca para contradizer os acima.
+
+### 3.4. Context Distillation (Refresh Curto)
+*   **Conceito:** Mini-resumo de 1–2 frases para manter entidades chave vivas em cenas longas, sem custo de CoD completo.
+*   **Aplicação:** Em transições dentro da mesma cena longa; não substituir CoD offline.
+*   **Instrução Padrão:**
+    > "Destile em 1–2 frases: quem (2-3 entidades), onde, objetivo atual, risco ativo. Use só para refresh interno, não exibir."
 
 ---
 
@@ -116,8 +152,8 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
     > "Sua resposta deve seguir estritamente este formato:
     > ```markdown
     > <internal_processing>
-    > - Análise de Regras: [Cálculo]
-    > - Decisão Narrativa: [Escolha ToT]
+    > - Plano: [2 bullets P&S ou 3 ramos ToT/SC-CoT]
+    > - Verificação: [Checklist curta por cena]
     > </internal_processing>
     > [Narrativa Imersiva aqui...]
     > ```"
@@ -136,6 +172,28 @@ Este documento define o "stack" de técnicas de Engenharia de Prompt utilizadas 
     > - Tempo Narrativo: +[X] minutos/horas.
     > - Turnos de Combate: [X] rodadas passadas.
     > Use isso para expirar efeitos ativos."
+*   **Micro-Verificação:** Se houve alteração de tempo/efeito, rode um SC-CoT de 2 ramos focado em expirar buffs/debuffs e escolha o resultado mais conservador.
+
+### 5.6. Retrieval Guardrails (Consulta Obrigatória)
+*   **Conceito:** Antes de decidir ação/lore/regra, consultar fontes em ordem (Slots, Fichas, Relações, Plot, Mundo). Se não houver dado, ativar Incerteza.
+*   **Aplicação:** Toda decisão que dependa de estado ou lore.
+*   **Instrução Padrão:**
+    > "Antes de agir, consulte fontes nesta ordem: Slots > Ficha > Relações > Plot > Mundo. Se faltar dado, pergunte ao jogador (Uncertainty) em vez de inventar. Nunca invente relações/fatos para NPC T1/T2 sem fonte."
+
+### 5.7. Rationale + Verifier Split
+*   **Conceito:** Separar um rascunho curto da verificação curta (3 itens) antes da saída final.
+*   **Aplicação:** Combate, Social, Íntimo, Exploração.
+*   **Checklists Sugeridos:**
+    - Combate: Regra aplicada? Consequência clara? Tempo/efeito atualizado?
+    - Social: Subtexto presente? Corpo contradiz fala? TURN força reação?
+    - Íntimo: Gaze alternando? Sentido primário variando? Tensão crescendo?
+    - Exploração: Pista nova? Perigo claro? Tempo/recursos ajustados?
+
+### 5.8. Output-Sandwich
+*   **Conceito:** Bloco oculto curto (plano + verificação) seguido da narrativa livre; invisível ao jogador.
+*   **Aplicação:** Todas as respostas; mantém engrenagens escondidas.
+*   **Instrução Padrão:**
+    > "Use `<internal_processing>` para plano + verificação (2-4 bullets). Em seguida, entregue apenas narrativa/feedback mecânico visível."
 
 ---
 
